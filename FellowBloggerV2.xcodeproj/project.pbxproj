@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6A5183E9575AE64D1E05FDB6 /* Pods_FellowBloggerV2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7E097EBC3F3ACB6EB0BA36 /* Pods_FellowBloggerV2.framework */; };
 		9301EEA1223A9253006A4495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEA0223A9253006A4495 /* AppDelegate.swift */; };
-		9301EEA3223A9253006A4495 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEA2223A9253006A4495 /* ViewController.swift */; };
+		9301EEA3223A9253006A4495 /* BloggerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEA2223A9253006A4495 /* BloggerTabBarController.swift */; };
 		9301EEA6223A9253006A4495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9301EEA4223A9253006A4495 /* Main.storyboard */; };
 		9301EEA8223A9255006A4495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9301EEA7223A9255006A4495 /* Assets.xcassets */; };
 		9301EEAB223A9255006A4495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9301EEA9223A9255006A4495 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,11 @@
 		9301EEBF223AB46E006A4495 /* Blogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEBE223AB46E006A4495 /* Blogger.swift */; };
 		9301EEC1223AB4A1006A4495 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEC0223AB4A0006A4495 /* Date+Extensions.swift */; };
 		9301EEC3223AB4C1006A4495 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEC2223AB4C1006A4495 /* String+Extensions.swift */; };
+		9301EECB223AE49A006A4495 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9301EECA223AE49A006A4495 /* LoginView.storyboard */; };
+		9301EECD223AE6F1006A4495 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EECC223AE6F1006A4495 /* LoginViewController.swift */; };
+		9301EECF223AE6FD006A4495 /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EECE223AE6FD006A4495 /* CreateAccountController.swift */; };
+		9301EED1223AE76A006A4495 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EED0223AE769006A4495 /* UIViewController+Alerts.swift */; };
+		9301EED3223AE771006A4495 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EED2223AE771006A4495 /* UIViewController+Navigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +34,7 @@
 		8D7E097EBC3F3ACB6EB0BA36 /* Pods_FellowBloggerV2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FellowBloggerV2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9301EE9D223A9253006A4495 /* FellowBloggerV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FellowBloggerV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9301EEA0223A9253006A4495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9301EEA2223A9253006A4495 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9301EEA2223A9253006A4495 /* BloggerTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloggerTabBarController.swift; sourceTree = "<group>"; };
 		9301EEA5223A9253006A4495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9301EEA7223A9255006A4495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9301EEAA223A9255006A4495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +47,11 @@
 		9301EEBE223AB46E006A4495 /* Blogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blogger.swift; sourceTree = "<group>"; };
 		9301EEC0223AB4A0006A4495 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		9301EEC2223AB4C1006A4495 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		9301EECA223AE49A006A4495 /* LoginView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginView.storyboard; path = ../../../NationalDish/NationalDish/Storyboards/LoginView.storyboard; sourceTree = "<group>"; };
+		9301EECC223AE6F1006A4495 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9301EECE223AE6FD006A4495 /* CreateAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
+		9301EED0223AE769006A4495 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
+		9301EED2223AE771006A4495 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +108,9 @@
 				9301EEC4223AB4EB006A4495 /* Extensions */,
 				9301EEBD223AB44F006A4495 /* Model */,
 				9301EEB6223AB3CE006A4495 /* Firebase Services */,
-				9301EEA2223A9253006A4495 /* ViewController.swift */,
-				9301EEA4223A9253006A4495 /* Main.storyboard */,
-				9301EEA7223A9255006A4495 /* Assets.xcassets */,
-				9301EEA9223A9255006A4495 /* LaunchScreen.storyboard */,
+				9301EEC5223AE27E006A4495 /* Controllers */,
+				9301EEC6223AE298006A4495 /* Storyboards */,
+				9301EEC7223AE2B7006A4495 /* Supporting Files */,
 				9301EEAC223A9255006A4495 /* Info.plist */,
 				9301EEB2223A94FF006A4495 /* GoogleService-Info.plist */,
 			);
@@ -132,8 +141,38 @@
 			children = (
 				9301EEC0223AB4A0006A4495 /* Date+Extensions.swift */,
 				9301EEC2223AB4C1006A4495 /* String+Extensions.swift */,
+				9301EED0223AE769006A4495 /* UIViewController+Alerts.swift */,
+				9301EED2223AE771006A4495 /* UIViewController+Navigation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9301EEC5223AE27E006A4495 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9301EEA2223A9253006A4495 /* BloggerTabBarController.swift */,
+				9301EECE223AE6FD006A4495 /* CreateAccountController.swift */,
+				9301EECC223AE6F1006A4495 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9301EEC6223AE298006A4495 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9301EEA4223A9253006A4495 /* Main.storyboard */,
+				9301EECA223AE49A006A4495 /* LoginView.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9301EEC7223AE2B7006A4495 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9301EEA7223A9255006A4495 /* Assets.xcassets */,
+				9301EEA9223A9255006A4495 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +239,7 @@
 				9301EEB3223A94FF006A4495 /* GoogleService-Info.plist in Resources */,
 				9301EEA8223A9255006A4495 /* Assets.xcassets in Resources */,
 				9301EEA6223A9253006A4495 /* Main.storyboard in Resources */,
+				9301EECB223AE49A006A4495 /* LoginView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,14 +315,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9301EECF223AE6FD006A4495 /* CreateAccountController.swift in Sources */,
 				9301EEBA223AB41C006A4495 /* StorageService.swift in Sources */,
 				9301EEC1223AB4A1006A4495 /* Date+Extensions.swift in Sources */,
 				9301EEB5223AB3BF006A4495 /* AuthService.swift in Sources */,
 				9301EEBF223AB46E006A4495 /* Blogger.swift in Sources */,
 				9301EEC3223AB4C1006A4495 /* String+Extensions.swift in Sources */,
 				9301EEB8223AB3F6006A4495 /* DBService.swift in Sources */,
+				9301EED1223AE76A006A4495 /* UIViewController+Alerts.swift in Sources */,
 				9301EEBC223AB44A006A4495 /* Blog.swift in Sources */,
-				9301EEA3223A9253006A4495 /* ViewController.swift in Sources */,
+				9301EEA3223A9253006A4495 /* BloggerTabBarController.swift in Sources */,
+				9301EECD223AE6F1006A4495 /* LoginViewController.swift in Sources */,
+				9301EED3223AE771006A4495 /* UIViewController+Navigation.swift in Sources */,
 				9301EEA1223A9253006A4495 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
