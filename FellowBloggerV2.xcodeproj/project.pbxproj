@@ -30,6 +30,7 @@
 		9301EEDA223FE6D2006A4495 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EED9223FE6D2006A4495 /* BlogViewController.swift */; };
 		9301EEDC223FFFF9006A4495 /* AddBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEDB223FFFF9006A4495 /* AddBlogViewController.swift */; };
 		9301EEDE2240056C006A4495 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEDD2240056C006A4495 /* Constants.swift */; };
+		9301EEE022401EAA006A4495 /* DetailBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEDF22401EAA006A4495 /* DetailBlogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		9301EED9223FE6D2006A4495 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		9301EEDB223FFFF9006A4495 /* AddBlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBlogViewController.swift; sourceTree = "<group>"; };
 		9301EEDD2240056C006A4495 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9301EEDF22401EAA006A4495 /* DetailBlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBlogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				9301EECC223AE6F1006A4495 /* LoginViewController.swift */,
 				9301EED9223FE6D2006A4495 /* BlogViewController.swift */,
 				9301EEDB223FFFF9006A4495 /* AddBlogViewController.swift */,
+				9301EEDF22401EAA006A4495 /* DetailBlogViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				9301EEA3223A9253006A4495 /* BloggerTabBarController.swift in Sources */,
 				9301EEDA223FE6D2006A4495 /* BlogViewController.swift in Sources */,
 				9301EECD223AE6F1006A4495 /* LoginViewController.swift in Sources */,
+				9301EEE022401EAA006A4495 /* DetailBlogViewController.swift in Sources */,
 				9301EED3223AE771006A4495 /* UIViewController+Navigation.swift in Sources */,
 				9301EEA1223A9253006A4495 /* AppDelegate.swift in Sources */,
 			);

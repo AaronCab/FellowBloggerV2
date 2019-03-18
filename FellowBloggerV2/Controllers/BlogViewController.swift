@@ -43,12 +43,26 @@ class BlogViewController: UIViewController {
         navigationItem.title = "FellowBloggerV2"
         fetchBlogs()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Show Blog Details" {
+            guard let cell = sender as? BlogCellCollectionViewCell,
+                let indexPath = blogCollectionView.indexPath(for: cell),
+                let blogDVC = segue.destination as? DetailBlogViewController else {
+                    fatalError("cannot segue to blogDVC")
+            }
+            let blog = blogs[indexPath.row]
+            blogDVC.displayName = cell.blogLabel.text
+            blogDVC.blog = blog
+        } else if segue.identifier == "Add Blog" {
+            
+        }
+    }
     @objc private func fetchBlogs(){
         refreshControl.beginRefreshing()
         listener = DBService.firestoreDB
             .collection(BlogsCollectionKeys.CollectionKey).addSnapshotListener { [weak self] (snapshot, error) in
                 if let error = error {
-                    print("failed to fetch dishes with error: \(error.localizedDescription)")
+                    print("failed to fetch Blogs with error: \(error.localizedDescription)")
                 } else if let snapshot = snapshot {
                     self?.blogs = snapshot.documents.map { Blog(dict: $0.data()) }
                         .sorted { $0.createdDate.date() > $1.createdDate.date() }
@@ -72,18 +86,18 @@ extension BlogViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlogCell", for: indexPath) as? BlogCellCollectionViewCell else { return UICollectionViewCell()}
         let userBlog = blogs[indexPath.row]
-//        let userBlogger = blogger[indexPath.row]
         cell.blogLabel.text = userBlog.blogDescription
         cell.blogImage.kf.indicatorType = .activity
         cell.blogImage.kf.setImage(with: URL(string: userBlog.imageURL), placeholder: #imageLiteral(resourceName: "icons8-check_male"))
-//        cell.profileImage.kf.setImage(with: URL(string: userBlogger.photoURL!), placeholder: #imageLiteral(resourceName: "icons8-check_male"))
         return cell
     }
     
     
 }
 extension BlogViewController: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //performSegue(withIdentifier: "Show Blog Details", sender: indexPath)
+    }
 }
 extension BlogViewController: AuthServiceSignOutDelegate {
     func didSignOut(_ authservice: AuthService) {
