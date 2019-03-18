@@ -70,7 +70,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Rp7-x3-6ed"/>
+                    <navigationItem key="navigationItem" id="Rp7-x3-6ed">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="Qnq-Dm-iG3">
+                            <connections>
+                                <action selector="signOut:" destination="BYZ-38-t0r" id="6Jn-7d-qkV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="blogCollectionView" destination="mQn-jb-OhN" id="flj-b0-SIs"/>
                     </connections>

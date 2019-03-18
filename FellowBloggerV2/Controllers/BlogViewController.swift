@@ -19,6 +19,13 @@ class BlogViewController: UIViewController {
             }
         }
     }
+    private var blogger = [Blogger](){
+        didSet{
+            DispatchQueue.main.async {
+                self.blogCollectionView.reloadData()
+            }
+        }
+    }
     private var listener: ListenerRegistration!
     private var authservice = AppDelegate.authservice
     private lazy var refreshControl: UIRefreshControl = {
@@ -50,6 +57,10 @@ class BlogViewController: UIViewController {
                 }
         }
     }
+    
+    @IBAction func signOut(_ sender: UIBarButtonItem) {
+        authservice.signOutAccount()
+    }
 }
 
 extension BlogViewController: UICollectionViewDataSource{
@@ -60,9 +71,11 @@ extension BlogViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlogCell", for: indexPath) as? BlogCellCollectionViewCell else { return UICollectionViewCell()}
         let userBlog = blogs[indexPath.row]
+//        let userBlogger = blogger[indexPath.row]
         cell.blogLabel.text = userBlog.blogDescription
         cell.blogImage.kf.indicatorType = .activity
         cell.blogImage.kf.setImage(with: URL(string: userBlog.imageURL), placeholder: #imageLiteral(resourceName: "icons8-check_male"))
+//        cell.profileImage.kf.setImage(with: URL(string: userBlogger.photoURL!), placeholder: #imageLiteral(resourceName: "icons8-check_male"))
         return cell
     }
     
