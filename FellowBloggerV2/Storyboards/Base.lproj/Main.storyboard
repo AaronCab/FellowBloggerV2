@@ -161,8 +161,16 @@
                                 <action selector="cancelButtonPressed:" destination="If8-2j-kCp" id="2RA-I1-g7g"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Post" id="Ygi-Qp-xu3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="Ygi-Qp-xu3">
+                            <connections>
+                                <action selector="postButtonPressed:" destination="If8-2j-kCp" id="FI8-6i-02X"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="blogDescriptionTextView" destination="D22-6X-9Aw" id="bGV-K6-XnD"/>
+                        <outlet property="blogImage" destination="tVy-wK-fSp" id="M2A-lm-4fx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Tm-mf-Th4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

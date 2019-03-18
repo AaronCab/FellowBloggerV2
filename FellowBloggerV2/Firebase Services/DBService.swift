@@ -65,7 +65,7 @@ final class DBService {
         }
     }
     
-    static public func postBlog(blog: Blog) {
+    static public func postBlog(blog: Blog, completion: @escaping (Error?) -> Void) {
         firestoreDB.collection(BlogsCollectionKeys.CollectionKey)
             .document(blog.documentId).setData([
                 BlogsCollectionKeys.CreatedDateKey     : blog.createdDate,
