@@ -40,6 +40,7 @@ class BlogViewController: UIViewController {
         blogCollectionView.dataSource = self
         blogCollectionView.delegate = self
         authservice.authserviceSignOutDelegate = self
+        navigationItem.title = "FellowBloggerV2"
         fetchBlogs()
     }
     @objc private func fetchBlogs(){

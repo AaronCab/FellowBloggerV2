@@ -28,6 +28,7 @@
 		9301EED3223AE771006A4495 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EED2223AE771006A4495 /* UIViewController+Navigation.swift */; };
 		9301EED5223FE43A006A4495 /* BlogCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EED4223FE43A006A4495 /* BlogCellCollectionViewCell.swift */; };
 		9301EEDA223FE6D2006A4495 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EED9223FE6D2006A4495 /* BlogViewController.swift */; };
+		9301EEDC223FFFF9006A4495 /* AddBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEDB223FFFF9006A4495 /* AddBlogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9301EED2223AE771006A4495 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		9301EED4223FE43A006A4495 /* BlogCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		9301EED9223FE6D2006A4495 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
+		9301EEDB223FFFF9006A4495 /* AddBlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBlogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				9301EECE223AE6FD006A4495 /* CreateAccountController.swift */,
 				9301EECC223AE6F1006A4495 /* LoginViewController.swift */,
 				9301EED9223FE6D2006A4495 /* BlogViewController.swift */,
+				9301EEDB223FFFF9006A4495 /* AddBlogViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			files = (
 				9301EECF223AE6FD006A4495 /* CreateAccountController.swift in Sources */,
 				9301EEBA223AB41C006A4495 /* StorageService.swift in Sources */,
+				9301EEDC223FFFF9006A4495 /* AddBlogViewController.swift in Sources */,
 				9301EED5223FE43A006A4495 /* BlogCellCollectionViewCell.swift in Sources */,
 				9301EEC1223AB4A1006A4495 /* Date+Extensions.swift in Sources */,
 				9301EEB5223AB3BF006A4495 /* AuthService.swift in Sources */,

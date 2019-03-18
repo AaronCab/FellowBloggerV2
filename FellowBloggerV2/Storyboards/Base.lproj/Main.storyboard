@@ -56,6 +56,7 @@
                                             <outlet property="blogImage" destination="xNd-tv-9hM" id="AOT-YI-uNc"/>
                                             <outlet property="blogLabel" destination="uQG-az-P8o" id="BPe-ci-SBK"/>
                                             <outlet property="profileImage" destination="kdj-l9-udY" id="pfy-XD-Dvc"/>
+                                            <segue destination="9dU-g1-can" kind="show" id="QZs-XQ-0Hk"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -76,6 +77,11 @@
                                 <action selector="signOut:" destination="BYZ-38-t0r" id="6Jn-7d-qkV"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CFm-qJ-6ha">
+                            <connections>
+                                <segue destination="ZQC-Dj-OyY" kind="show" id="dhc-05-RSC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="blogCollectionView" destination="mQn-jb-OhN" id="flj-b0-SIs"/>
@@ -84,6 +90,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1863.2" y="-504.19790104947532"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eRc-6x-hb7">
+            <objects>
+                <viewController id="9dU-g1-can" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ubQ-9A-NM8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1EY-Kd-27L"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rT0-cW-Zkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2842" y="-483"/>
+        </scene>
+        <!--Add Blog View Controller-->
+        <scene sceneID="fvb-ak-bha">
+            <objects>
+                <viewController id="If8-2j-kCp" customClass="AddBlogViewController" customModule="FellowBloggerV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5WG-ip-ROF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's on your mind..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D22-6X-9Aw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="177"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tVy-wK-fSp">
+                                <rect key="frame" x="0.0" y="249" width="375" height="360"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="hCE-Pi-NkR"/>
+                                </constraints>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOP-jQ-07g">
+                                <rect key="frame" x="0.0" y="618" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="VDz-BK-drO"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KOd-aO-z0j"/>
+                                    <barButtonItem title="Photo Library" id="kjp-vD-gTX">
+                                        <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rOP-jQ-07g" firstAttribute="leading" secondItem="eeX-b8-0IU" secondAttribute="leading" id="ArX-cH-x2h"/>
+                            <constraint firstItem="tVy-wK-fSp" firstAttribute="trailing" secondItem="D22-6X-9Aw" secondAttribute="trailing" id="CbM-MJ-SRe"/>
+                            <constraint firstItem="rOP-jQ-07g" firstAttribute="trailing" secondItem="eeX-b8-0IU" secondAttribute="trailing" id="O7p-CA-Yot"/>
+                            <constraint firstItem="tVy-wK-fSp" firstAttribute="leading" secondItem="D22-6X-9Aw" secondAttribute="leading" id="S3F-h5-rkh"/>
+                            <constraint firstItem="tVy-wK-fSp" firstAttribute="leading" secondItem="rOP-jQ-07g" secondAttribute="leading" id="Vh3-eE-Gxd"/>
+                            <constraint firstItem="tVy-wK-fSp" firstAttribute="top" secondItem="D22-6X-9Aw" secondAttribute="bottom" constant="8" id="Zr8-0e-DDF"/>
+                            <constraint firstItem="tVy-wK-fSp" firstAttribute="trailing" secondItem="rOP-jQ-07g" secondAttribute="trailing" id="cMy-cV-fdA"/>
+                            <constraint firstItem="rOP-jQ-07g" firstAttribute="leading" secondItem="5WG-ip-ROF" secondAttribute="leading" id="cTu-Aj-M0Z"/>
+                            <constraint firstItem="D22-6X-9Aw" firstAttribute="top" secondItem="eeX-b8-0IU" secondAttribute="top" id="fgc-kM-lnE"/>
+                            <constraint firstItem="rOP-jQ-07g" firstAttribute="top" secondItem="eeX-b8-0IU" secondAttribute="bottom" id="ftp-HY-Zew"/>
+                            <constraint firstItem="eeX-b8-0IU" firstAttribute="bottom" secondItem="tVy-wK-fSp" secondAttribute="bottom" constant="9" id="h2j-2C-OEi"/>
+                            <constraint firstAttribute="trailing" secondItem="rOP-jQ-07g" secondAttribute="trailing" id="s0c-5B-6Xl"/>
+                            <constraint firstItem="tVy-wK-fSp" firstAttribute="top" secondItem="D22-6X-9Aw" secondAttribute="bottom" constant="8" symbolic="YES" id="xAk-56-C2w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eeX-b8-0IU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RAR-tS-Qrs">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="N5g-Rm-CwY">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="If8-2j-kCp" id="2RA-I1-g7g"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="Ygi-Qp-xu3"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Tm-mf-Th4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3792.8000000000002" y="-1182.4587706146926"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xCU-ny-uD4">
@@ -193,6 +276,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4si-Jd-NaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959.20000000000005" y="1001.649175412294"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i2m-az-oJ8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZQC-Dj-OyY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nDz-Pk-X7o">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="If8-2j-kCp" kind="relationship" relationship="rootViewController" id="Nde-9T-xBg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBC-Ue-EF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2853.5999999999999" y="-1182.4587706146926"/>
         </scene>
     </scenes>
     <resources>
