@@ -26,6 +26,8 @@
 		9301EECF223AE6FD006A4495 /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EECE223AE6FD006A4495 /* CreateAccountController.swift */; };
 		9301EED1223AE76A006A4495 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EED0223AE769006A4495 /* UIViewController+Alerts.swift */; };
 		9301EED3223AE771006A4495 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EED2223AE771006A4495 /* UIViewController+Navigation.swift */; };
+		9301EED5223FE43A006A4495 /* BlogCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EED4223FE43A006A4495 /* BlogCellCollectionViewCell.swift */; };
+		9301EEDA223FE6D2006A4495 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EED9223FE6D2006A4495 /* BlogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		9301EECE223AE6FD006A4495 /* CreateAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
 		9301EED0223AE769006A4495 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		9301EED2223AE771006A4495 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		9301EED4223FE43A006A4495 /* BlogCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		9301EED9223FE6D2006A4495 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			children = (
 				9301EEA0223A9253006A4495 /* AppDelegate.swift */,
 				9301EEC4223AB4EB006A4495 /* Extensions */,
+				9301EED6223FE459006A4495 /* Views */,
 				9301EEBD223AB44F006A4495 /* Model */,
 				9301EEB6223AB3CE006A4495 /* Firebase Services */,
 				9301EEC5223AE27E006A4495 /* Controllers */,
@@ -153,6 +158,7 @@
 				9301EEA2223A9253006A4495 /* BloggerTabBarController.swift */,
 				9301EECE223AE6FD006A4495 /* CreateAccountController.swift */,
 				9301EECC223AE6F1006A4495 /* LoginViewController.swift */,
+				9301EED9223FE6D2006A4495 /* BlogViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +179,14 @@
 				9301EEA9223A9255006A4495 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9301EED6223FE459006A4495 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9301EED4223FE43A006A4495 /* BlogCellCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +331,7 @@
 			files = (
 				9301EECF223AE6FD006A4495 /* CreateAccountController.swift in Sources */,
 				9301EEBA223AB41C006A4495 /* StorageService.swift in Sources */,
+				9301EED5223FE43A006A4495 /* BlogCellCollectionViewCell.swift in Sources */,
 				9301EEC1223AB4A1006A4495 /* Date+Extensions.swift in Sources */,
 				9301EEB5223AB3BF006A4495 /* AuthService.swift in Sources */,
 				9301EEBF223AB46E006A4495 /* Blogger.swift in Sources */,
@@ -325,6 +340,7 @@
 				9301EED1223AE76A006A4495 /* UIViewController+Alerts.swift in Sources */,
 				9301EEBC223AB44A006A4495 /* Blog.swift in Sources */,
 				9301EEA3223A9253006A4495 /* BloggerTabBarController.swift in Sources */,
+				9301EEDA223FE6D2006A4495 /* BlogViewController.swift in Sources */,
 				9301EECD223AE6F1006A4495 /* LoginViewController.swift in Sources */,
 				9301EED3223AE771006A4495 /* UIViewController+Navigation.swift in Sources */,
 				9301EEA1223A9253006A4495 /* AppDelegate.swift in Sources */,

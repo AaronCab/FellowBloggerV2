@@ -1,9 +1,9 @@
 //
 //  CreateAccountController.swift
-//  NationalDish
+//  FellowBloggerV2
 //
-//  Created by Alex Paul on 3/7/19.
-//  Copyright © 2019 Alex Paul. All rights reserved.
+//  Created by Aaron Cabreja on 3/7/19.
+//  Copyright © 2019 Aaron Cabreja. All rights reserved.
 //
 
 import UIKit
