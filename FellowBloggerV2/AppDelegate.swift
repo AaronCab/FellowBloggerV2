@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         window = UIWindow(frame: UIScreen.main.bounds)
-        if let _ = AppDelegate.authservice.getCurrentUser() {
+        if let user = AppDelegate.authservice.getCurrentUser() {
+            print("user id: \(user.uid)")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let dishesTabBarController = storyboard.instantiateViewController(withIdentifier: "BloggerTabController") as! UITabBarController
             window?.rootViewController = dishesTabBarController
