@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BloggerTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
