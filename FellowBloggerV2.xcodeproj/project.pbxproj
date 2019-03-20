@@ -37,6 +37,7 @@
 		9301EEEE22415F78006A4495 /* BlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEED22415F77006A4495 /* BlogCell.swift */; };
 		934823302242B81F0019D639 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9348232F2242B81F0019D639 /* SearchViewController.swift */; };
 		934823382242C0EA0019D639 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934823372242C0EA0019D639 /* ProfileViewController.swift */; };
+		9348233B2242C2740019D639 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934823392242C10E0019D639 /* LoginView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -282,6 +283,7 @@
 				9301EEE422414BBC006A4495 /* ProfileHeaderView.xib in Resources */,
 				9301EEEC22415F6B006A4495 /* BlogCell.xib in Resources */,
 				9301EEB3223A94FF006A4495 /* GoogleService-Info.plist in Resources */,
+				9348233B2242C2740019D639 /* LoginView.storyboard in Resources */,
 				9301EEA8223A9255006A4495 /* Assets.xcassets in Resources */,
 				9301EEA6223A9253006A4495 /* Main.storyboard in Resources */,
 			);
