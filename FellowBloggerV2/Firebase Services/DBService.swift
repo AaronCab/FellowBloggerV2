@@ -38,7 +38,6 @@ final class DBService {
     public static var firestoreDB: Firestore = {
         let db = Firestore.firestore()
         let settings = db.settings
-//        settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
         return db
     }()
@@ -91,6 +90,32 @@ final class DBService {
                     completion(error)
                 } else {
                     completion(nil)
+                }
+        }
+    }
+    static public func fetchUser(userId: String, completion: @escaping (Error?, Blogger?) -> Void) {
+        DBService.firestoreDB
+            .collection(BloggersCollectionKeys.CollectionKey)
+            .whereField(BloggersCollectionKeys.BloggerIdKey, isEqualTo: userId)
+            .getDocuments { (snapshot, error) in
+                if let error = error {
+                    completion(error, nil)
+                } else if let snapshot = snapshot?.documents.first {
+                    let dishCreator = Blogger(dict: snapshot.data())
+                    completion(nil, dishCreator)
+                }
+        }
+    }
+    static public func fetchBlogCreator(userId: String, completion: @escaping (Error?, Blogger?) -> Void) {
+        DBService.firestoreDB
+            .collection(BloggersCollectionKeys.CollectionKey)
+            .whereField(BloggersCollectionKeys.BloggerIdKey, isEqualTo: userId)
+            .getDocuments { (snapshot, error) in
+                if let error = error {
+                    completion(error, nil)
+                } else if let snapshot = snapshot?.documents.first {
+                    let blogCreator = Blogger(dict: snapshot.data())
+                    completion(nil, blogCreator)
                 }
         }
     }

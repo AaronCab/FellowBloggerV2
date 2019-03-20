@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileHeaderView" customModule="FellowBloggerV2" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="be7-Af-SL5"/>
+                <outlet property="coverImage" destination="QsY-YW-oBk" id="IQa-qw-v7X"/>
+                <outlet property="displayNameLabel" destination="o0E-LZ-mgJ" id="OVH-EN-aqG"/>
+                <outlet property="editButton" destination="0af-30-fxu" id="0KA-Vx-mbA"/>
+                <outlet property="profileImageView" destination="Pb9-FA-vwU" id="C9O-Kd-cdt"/>
+                <outlet property="signOutButton" destination="xgf-BO-VDF" id="aIy-BR-wXP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-image" translatesAutoresizingMaskIntoConstraints="NO" id="QsY-YW-oBk">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="102" id="En6-CG-Htl"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-image" translatesAutoresizingMaskIntoConstraints="NO" id="Pb9-FA-vwU" customClass="CircularImageView" customModule="FellowBloggerV2" customModuleProvider="target">
+                    <rect key="frame" x="8" y="57" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="VK2-MR-dda"/>
+                        <constraint firstAttribute="width" constant="100" id="t49-UI-VaR"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0E-LZ-mgJ">
+                    <rect key="frame" x="8" y="182" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0af-30-fxu">
+                    <rect key="frame" x="317" y="110" width="30" height="30"/>
+                    <state key="normal" title="edit"/>
+                    <connections>
+                        <action selector="editButtonPressed:" destination="-1" eventType="touchUpInside" id="ENL-4M-1Ej"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-BO-VDF">
+                    <rect key="frame" x="292" y="144" width="55" height="30"/>
+                    <state key="normal" title="sign out"/>
+                    <connections>
+                        <action selector="signOutButtonPressed:" destination="-1" eventType="touchUpInside" id="RcM-nb-sy9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="o0E-LZ-mgJ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="8" id="3tX-Pt-2Ve"/>
+                <constraint firstItem="xgf-BO-VDF" firstAttribute="top" secondItem="0af-30-fxu" secondAttribute="bottom" constant="4" id="VxX-eN-iV1"/>
+                <constraint firstItem="Pb9-FA-vwU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="XXa-fk-TaH"/>
+                <constraint firstItem="QsY-YW-oBk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Ymt-kT-iUB"/>
+                <constraint firstItem="0af-30-fxu" firstAttribute="top" secondItem="QsY-YW-oBk" secondAttribute="bottom" constant="8" id="Ynb-QW-9kq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0af-30-fxu" secondAttribute="trailing" constant="28" id="aX2-Tj-4Oe"/>
+                <constraint firstItem="QsY-YW-oBk" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="anO-mO-q9W"/>
+                <constraint firstItem="Pb9-FA-vwU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="57" id="jDW-0V-oQ9"/>
+                <constraint firstItem="o0E-LZ-mgJ" firstAttribute="top" secondItem="xgf-BO-VDF" secondAttribute="bottom" constant="8" id="jXu-57-0Ii"/>
+                <constraint firstItem="QsY-YW-oBk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lDR-WO-YgZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xgf-BO-VDF" secondAttribute="trailing" constant="28" id="q3N-kI-tVM"/>
+                <constraint firstItem="o0E-LZ-mgJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="qFy-91-fuH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.40000000000001" y="-4.497751124437781"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="placeholder-image" width="512" height="512"/>
+    </resources>
+</document>

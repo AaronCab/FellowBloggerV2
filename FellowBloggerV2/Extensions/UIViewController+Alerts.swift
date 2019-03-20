@@ -1,8 +1,8 @@
 //
 //  UIViewController+Alerts.swift
-//  NationalDish
+//  FellowBloggerV2
 //
-//  Created by Alex Paul on 3/7/19.
+//  Created by Aaron Cabreja on 3/19/19.
 //  Copyright © 2019 Alex Paul. All rights reserved.
 //
 

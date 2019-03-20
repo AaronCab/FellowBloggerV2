@@ -238,17 +238,45 @@
             </objects>
             <point key="canvasLocation" x="1912.8" y="223.53823088455775"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="IYp-LR-4bE">
             <objects>
-                <viewController id="g1h-zP-3Bu" sceneMemberID="viewController">
+                <viewController id="g1h-zP-3Bu" customClass="ProfileViewController" customModule="FellowBloggerV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="og3-MM-ENn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iga-pC-SOf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oqg-9B-mHi" customClass="Show">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oqg-9B-mHi" id="FGP-Or-dFo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9dU-g1-can" kind="show" identifier="Show Blog Details" id="CFM-Df-dDd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3XR-jO-Ca2" firstAttribute="bottom" secondItem="Iga-pC-SOf" secondAttribute="bottom" id="AbP-Mz-sH2"/>
+                            <constraint firstItem="Iga-pC-SOf" firstAttribute="top" secondItem="3XR-jO-Ca2" secondAttribute="top" id="Ic7-eE-Bzo"/>
+                            <constraint firstItem="3XR-jO-Ca2" firstAttribute="trailing" secondItem="Iga-pC-SOf" secondAttribute="trailing" id="qDR-YB-6jV"/>
+                            <constraint firstItem="Iga-pC-SOf" firstAttribute="leading" secondItem="3XR-jO-Ca2" secondAttribute="leading" id="rVp-GP-S6Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3XR-jO-Ca2"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hiw-bN-fRg"/>
+                    <connections>
+                        <outlet property="tableView" destination="Iga-pC-SOf" id="moM-9C-Vhy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JlD-Ff-ej6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,4 +384,7 @@
         <image name="icons8-remove_user_group_man_man" width="25" height="25"/>
         <image name="icons8-search" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="CFM-Df-dDd"/>
+    </inferredMetricsTieBreakers>
 </document>
