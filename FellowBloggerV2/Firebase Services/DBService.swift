@@ -101,8 +101,8 @@ final class DBService {
                 if let error = error {
                     completion(error, nil)
                 } else if let snapshot = snapshot?.documents.first {
-                    let dishCreator = Blogger(dict: snapshot.data())
-                    completion(nil, dishCreator)
+                    let blogCreator = Blogger(dict: snapshot.data())
+                    completion(nil, blogCreator)
                 }
         }
     }

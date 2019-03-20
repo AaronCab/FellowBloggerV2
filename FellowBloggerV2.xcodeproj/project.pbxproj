@@ -21,7 +21,6 @@
 		9301EEBF223AB46E006A4495 /* Blogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEBE223AB46E006A4495 /* Blogger.swift */; };
 		9301EEC1223AB4A1006A4495 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEC0223AB4A0006A4495 /* Date+Extensions.swift */; };
 		9301EEC3223AB4C1006A4495 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEC2223AB4C1006A4495 /* String+Extensions.swift */; };
-		9301EECB223AE49A006A4495 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9301EECA223AE49A006A4495 /* LoginView.storyboard */; };
 		9301EECD223AE6F1006A4495 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EECC223AE6F1006A4495 /* LoginViewController.swift */; };
 		9301EECF223AE6FD006A4495 /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EECE223AE6FD006A4495 /* CreateAccountController.swift */; };
 		9301EED1223AE76A006A4495 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EED0223AE769006A4495 /* UIViewController+Alerts.swift */; };
@@ -33,10 +32,11 @@
 		9301EEE022401EAA006A4495 /* DetailBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEDF22401EAA006A4495 /* DetailBlogViewController.swift */; };
 		9301EEE422414BBC006A4495 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9301EEE322414BBC006A4495 /* ProfileHeaderView.xib */; };
 		9301EEE622414BC2006A4495 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEE522414BC2006A4495 /* ProfileHeaderView.swift */; };
-		9301EEE822414BD5006A4495 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEE722414BD5006A4495 /* ProfileViewController.swift */; };
 		9301EEEA22414C70006A4495 /* IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEE922414C70006A4495 /* IBDesignable.swift */; };
 		9301EEEC22415F6B006A4495 /* BlogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9301EEEB22415F6B006A4495 /* BlogCell.xib */; };
 		9301EEEE22415F78006A4495 /* BlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301EEED22415F77006A4495 /* BlogCell.swift */; };
+		934823302242B81F0019D639 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9348232F2242B81F0019D639 /* SearchViewController.swift */; };
+		934823382242C0EA0019D639 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934823372242C0EA0019D639 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +58,6 @@
 		9301EEBE223AB46E006A4495 /* Blogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blogger.swift; sourceTree = "<group>"; };
 		9301EEC0223AB4A0006A4495 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		9301EEC2223AB4C1006A4495 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		9301EECA223AE49A006A4495 /* LoginView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginView.storyboard; path = ../../../NationalDish/NationalDish/Storyboards/LoginView.storyboard; sourceTree = "<group>"; };
 		9301EECC223AE6F1006A4495 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9301EECE223AE6FD006A4495 /* CreateAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
 		9301EED0223AE769006A4495 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
@@ -70,10 +69,12 @@
 		9301EEDF22401EAA006A4495 /* DetailBlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBlogViewController.swift; sourceTree = "<group>"; };
 		9301EEE322414BBC006A4495 /* ProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
 		9301EEE522414BC2006A4495 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
-		9301EEE722414BD5006A4495 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "../../../NationalDish/NationalDish/Controllers/Profile View Controllers/ProfileViewController.swift"; sourceTree = "<group>"; };
 		9301EEE922414C70006A4495 /* IBDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignable.swift; sourceTree = "<group>"; };
 		9301EEEB22415F6B006A4495 /* BlogCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogCell.xib; sourceTree = "<group>"; };
 		9301EEED22415F77006A4495 /* BlogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogCell.swift; sourceTree = "<group>"; };
+		9348232F2242B81F0019D639 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		934823372242C0EA0019D639 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../../ProfileViewController.swift; sourceTree = "<group>"; };
+		934823392242C10E0019D639 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LoginView.storyboard; path = ../../LoginView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,8 +181,9 @@
 				9301EECC223AE6F1006A4495 /* LoginViewController.swift */,
 				9301EED9223FE6D2006A4495 /* BlogViewController.swift */,
 				9301EEDB223FFFF9006A4495 /* AddBlogViewController.swift */,
+				934823372242C0EA0019D639 /* ProfileViewController.swift */,
 				9301EEDF22401EAA006A4495 /* DetailBlogViewController.swift */,
-				9301EEE722414BD5006A4495 /* ProfileViewController.swift */,
+				9348232F2242B81F0019D639 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -190,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				9301EEA4223A9253006A4495 /* Main.storyboard */,
-				9301EECA223AE49A006A4495 /* LoginView.storyboard */,
+				934823392242C10E0019D639 /* LoginView.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -282,7 +284,6 @@
 				9301EEB3223A94FF006A4495 /* GoogleService-Info.plist in Resources */,
 				9301EEA8223A9255006A4495 /* Assets.xcassets in Resources */,
 				9301EEA6223A9253006A4495 /* Main.storyboard in Resources */,
-				9301EECB223AE49A006A4495 /* LoginView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,10 +359,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				934823382242C0EA0019D639 /* ProfileViewController.swift in Sources */,
 				9301EECF223AE6FD006A4495 /* CreateAccountController.swift in Sources */,
 				9301EEEE22415F78006A4495 /* BlogCell.swift in Sources */,
 				9301EEDE2240056C006A4495 /* Constants.swift in Sources */,
-				9301EEE822414BD5006A4495 /* ProfileViewController.swift in Sources */,
 				9301EEBA223AB41C006A4495 /* StorageService.swift in Sources */,
 				9301EEDC223FFFF9006A4495 /* AddBlogViewController.swift in Sources */,
 				9301EEEA22414C70006A4495 /* IBDesignable.swift in Sources */,
@@ -371,6 +372,7 @@
 				9301EEBF223AB46E006A4495 /* Blogger.swift in Sources */,
 				9301EEC3223AB4C1006A4495 /* String+Extensions.swift in Sources */,
 				9301EEB8223AB3F6006A4495 /* DBService.swift in Sources */,
+				934823302242B81F0019D639 /* SearchViewController.swift in Sources */,
 				9301EEE622414BC2006A4495 /* ProfileHeaderView.swift in Sources */,
 				9301EED1223AE76A006A4495 /* UIViewController+Alerts.swift in Sources */,
 				9301EEBC223AB44A006A4495 /* Blog.swift in Sources */,
