@@ -52,6 +52,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.92729836702346802" green="0.67249751091003418" blue="0.67785441875457764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="blogImage" destination="xNd-tv-9hM" id="AOT-YI-uNc"/>
                                             <outlet property="blogLabel" destination="uQG-az-P8o" id="BPe-ci-SBK"/>
@@ -151,6 +152,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rT0-cW-Zkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2840.8000000000002" y="-483.50824587706148"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H5E-ev-lxb">
+            <objects>
+                <viewController id="gbb-Zh-z8n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SrK-Ze-A9f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KsD-dt-wvw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IxJ-PQ-rLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3836" y="-476"/>
         </scene>
         <!--Add Blog View Controller-->
         <scene sceneID="fvb-ak-bha">
@@ -385,6 +401,6 @@
         <image name="icons8-search" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CFM-Df-dDd"/>
+        <segue reference="QZs-XQ-0Hk"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -89,7 +89,18 @@ extension BlogViewController: UICollectionViewDataSource{
         cell.blogLabel.text = userBlog.blogDescription
         cell.blogImage.kf.indicatorType = .activity
         cell.blogImage.kf.setImage(with: URL(string: userBlog.imageURL), placeholder: #imageLiteral(resourceName: "icons8-check_male"))
+        fetchBlogCreator(userId: userBlog.bloggerId, cell: cell, blog: userBlog)
         return cell
+        
+    }
+    private func fetchBlogCreator(userId: String, cell: BlogCellCollectionViewCell, blog: Blog) {
+        DBService.fetchBlogCreator(userId: userId) { (error, blogCreator) in
+            if let error = error {
+                print("failed to fetch dish creator with error: \(error.localizedDescription)")
+            } else if let blogCreator = blogCreator {
+                cell.profileImage.kf.setImage(with: URL(string: blogCreator.photoURL!), placeholder: #imageLiteral(resourceName: "icons8-check_male"))
+            }
+        }
     }
     
     
