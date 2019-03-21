@@ -18,5 +18,5 @@ Blogging App that uses Firebase.
 - [x] selecting a blog post shows a detail view of the blog 
 - [x] user can see more options via an action sheet to carry out the appropriate action e.g delete, edit, save image
 - [x] user can search for other bloggers in the search tab 
-- [ ] selecting a blogger from the search takes the user to the blogger's profile page
-- [ ] user can view all blogs of a fellow blogger after selecting their profile
+- [x] selecting a blogger from the search takes the user to the blogger's profile page
+- [x] user can view all blogs of a fellow blogger after selecting their profile
