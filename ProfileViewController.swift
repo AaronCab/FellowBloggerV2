@@ -106,10 +106,16 @@ extension ProfileViewController: UITableViewDataSource {
     let blog = blogs[indexPath.row]
     let date = blog.createdDate
     cell.selectionStyle = .none
-    cell.blogDescriptionLabel.text = "@aaroncab1"
     cell.nameLabel.text = date.formatISODateString(dateFormat: "EEE, MMM d, yyyy")
     cell.blogImageView.kf.setImage(with: URL(string: blog.imageURL), placeholder: #imageLiteral(resourceName: "placeholder-image.png"))
     cell.descritpionLabel.text = blog.blogDescription
+    DBService.fetchUser(userId: blog.bloggerId) { [weak self] (error, user) in
+        if let _ = error {
+            self?.showAlert(title: "Error fetching account info", message: error?.localizedDescription)
+        } else if let user = user {
+            cell.blogDescriptionLabel.text = user.email
+        }
+    }
     return cell
   }
    
