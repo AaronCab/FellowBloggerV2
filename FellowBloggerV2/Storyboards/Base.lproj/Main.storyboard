@@ -471,6 +471,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9dU-g1-can" kind="show" identifier="Profile Detail View" id="ehX-W2-mZ7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -500,6 +503,6 @@
         <image name="icons8-search" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CFM-Df-dDd"/>
+        <segue reference="ehX-W2-mZ7"/>
     </inferredMetricsTieBreakers>
 </document>

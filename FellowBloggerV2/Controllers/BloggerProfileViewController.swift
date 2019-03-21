@@ -36,6 +36,18 @@ class BloggerProfileViewController: UIViewController {
 //        super.viewWillAppear(true)
 //        updateProfileUI()
 //    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Profile Detail View" {
+            guard let selectedIndexPath =  tableView.indexPathForSelectedRow,
+                let blogDVC = segue.destination as? DetailBlogViewController else {
+                    fatalError("cannot segue to blogDVC")
+            }
+            let blog = blogs[selectedIndexPath.row]
+            blogDVC.blog = blog
+        } else if segue.identifier == "Add Blog" {
+            
+        }
+    }
     private func configureTableView() {
         tableView.tableHeaderView = profileHeaderView
         tableView.dataSource = self
@@ -106,7 +118,7 @@ extension BloggerProfileViewController: UITableViewDataSource {
 
 extension BloggerProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "Show Profile Blog Details", sender: indexPath)
+        performSegue(withIdentifier: "Profile Detail View", sender: indexPath)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.BlogCellHeight
