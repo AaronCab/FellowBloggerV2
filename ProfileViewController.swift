@@ -35,6 +35,19 @@ class ProfileViewController: UIViewController {
     super.viewWillAppear(true)
     updateProfileUI()
   }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Show Blog Details" {
+            guard let cell = sender as? BlogCell,
+                let indexPath = tableView.indexPath(for: cell),
+                let blogDVC = segue.destination as? DetailBlogViewController else {
+                    fatalError("cannot segue to blogDVC")
+            }
+            let blog = blogs[indexPath.row]
+            blogDVC.blog = blog
+        } else if segue.identifier == "Add Blog" {
+            
+        }
+    }
   
   private func configureTableView() {
     tableView.tableHeaderView = profileHeaderView

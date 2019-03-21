@@ -23,37 +23,14 @@ class SearchViewController: UIViewController {
             }
         }
     }
-    private lazy var refreshControl: UIRefreshControl = {
-        let rc = UIRefreshControl()
-        userTableView.refreshControl = rc
-        rc.addTarget(self, action: #selector(fetchBlogger), for: .valueChanged)
-        return rc
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userTableView.dataSource = self
         userTableView.delegate = self
+        blogSearchBar.delegate = self
         navigationItem.title = "FellowBloggerV2"
-        fetchBlogger()
     }
-    @objc private func fetchBlogger(){
-        refreshControl.beginRefreshing()
-        listener = DBService.firestoreDB
-            .collection(BloggersCollectionKeys.CollectionKey).addSnapshotListener { [weak self] (snapshot, error) in
-                if let error = error {
-                    print("failed to fetch Blogs with error: \(error.localizedDescription)")
-                } else if let snapshot = snapshot {
-                    self?.blogger = snapshot.documents.map { Blogger(dict: $0.data()) }
-                        .sorted { $0.displayName > $1.displayName }
-                }
-                DispatchQueue.main.async {
-                    self?.refreshControl.endRefreshing()
-                }
-        }
-
-    }
-
 
 }
 extension SearchViewController: UITableViewDataSource{
@@ -73,4 +50,23 @@ extension SearchViewController: UITableViewDataSource{
 }
 extension SearchViewController: UITableViewDelegate{
     
+}
+extension SearchViewController: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == ""{
+            
+            return
+        } else {
+            listener = DBService.firestoreDB
+                .collection(BloggersCollectionKeys.CollectionKey).addSnapshotListener { [weak self] (snapshot, error) in
+                    if let error = error {
+                        print("failed to fetch Blogs with error: \(error.localizedDescription)")
+                    } else if let snapshot = snapshot {
+                        self?.blogger = snapshot.documents.map { Blogger(dict: $0.data()) }
+                            .filter { $0.displayName.contains(searchText.lowercased()) || $0.displayName.contains(searchText.uppercased()) || ($0.firstName?.contains(searchText.lowercased()))! || ($0.firstName?.contains(searchText.uppercased()))!}
+                    }
+            }
+
+        }
+    }
 }
