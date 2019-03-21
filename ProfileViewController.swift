@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
     return headerView
   }()
   private let authservice = AppDelegate.authservice
+    public var blogger: Blogger!
   private var blogs = [Blog]() {
     didSet {
       DispatchQueue.main.async {
@@ -36,13 +37,12 @@ class ProfileViewController: UIViewController {
     updateProfileUI()
   }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Show Blog Details" {
-            guard let cell = sender as? BlogCell,
-                let indexPath = tableView.indexPath(for: cell),
+        if segue.identifier == "Show Profile Blog Details" {
+            guard let selectedIndexPath =  tableView.indexPathForSelectedRow,
                 let blogDVC = segue.destination as? DetailBlogViewController else {
                     fatalError("cannot segue to blogDVC")
             }
-            let blog = blogs[indexPath.row]
+            let blog = blogs[selectedIndexPath.row]
             blogDVC.blog = blog
         } else if segue.identifier == "Add Blog" {
             
@@ -123,7 +123,7 @@ extension ProfileViewController: UITableViewDataSource {
 
 extension ProfileViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    performSegue(withIdentifier: "Show Blog Details", sender: indexPath)
+    performSegue(withIdentifier: "Show Profile Blog Details", sender: indexPath)
   }
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return Constants.BlogCellHeight

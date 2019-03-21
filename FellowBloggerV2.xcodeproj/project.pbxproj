@@ -38,6 +38,8 @@
 		934823302242B81F0019D639 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9348232F2242B81F0019D639 /* SearchViewController.swift */; };
 		934823382242C0EA0019D639 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934823372242C0EA0019D639 /* ProfileViewController.swift */; };
 		9348233B2242C2740019D639 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934823392242C10E0019D639 /* LoginView.storyboard */; };
+		9348233D2243D6740019D639 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9348233C2243D6740019D639 /* ProfileTableViewCell.swift */; };
+		9348233F2243E8000019D639 /* BloggerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9348233E2243E8000019D639 /* BloggerProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		9348232F2242B81F0019D639 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		934823372242C0EA0019D639 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../../ProfileViewController.swift; sourceTree = "<group>"; };
 		934823392242C10E0019D639 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LoginView.storyboard; path = ../../LoginView.storyboard; sourceTree = "<group>"; };
+		9348233C2243D6740019D639 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		9348233E2243E8000019D639 /* BloggerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloggerProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 				934823372242C0EA0019D639 /* ProfileViewController.swift */,
 				9301EEDF22401EAA006A4495 /* DetailBlogViewController.swift */,
 				9348232F2242B81F0019D639 /* SearchViewController.swift */,
+				9348233E2243E8000019D639 /* BloggerProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				9301EEE522414BC2006A4495 /* ProfileHeaderView.swift */,
 				9301EEEB22415F6B006A4495 /* BlogCell.xib */,
 				9301EEED22415F77006A4495 /* BlogCell.swift */,
+				9348233C2243D6740019D639 /* ProfileTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,12 +376,14 @@
 				9301EEEA22414C70006A4495 /* IBDesignable.swift in Sources */,
 				9301EED5223FE43A006A4495 /* BlogCellCollectionViewCell.swift in Sources */,
 				9301EEC1223AB4A1006A4495 /* Date+Extensions.swift in Sources */,
+				9348233D2243D6740019D639 /* ProfileTableViewCell.swift in Sources */,
 				9301EEB5223AB3BF006A4495 /* AuthService.swift in Sources */,
 				9301EEBF223AB46E006A4495 /* Blogger.swift in Sources */,
 				9301EEC3223AB4C1006A4495 /* String+Extensions.swift in Sources */,
 				9301EEB8223AB3F6006A4495 /* DBService.swift in Sources */,
 				934823302242B81F0019D639 /* SearchViewController.swift in Sources */,
 				9301EEE622414BC2006A4495 /* ProfileHeaderView.swift in Sources */,
+				9348233F2243E8000019D639 /* BloggerProfileViewController.swift in Sources */,
 				9301EED1223AE76A006A4495 /* UIViewController+Alerts.swift in Sources */,
 				9301EEBC223AB44A006A4495 /* Blog.swift in Sources */,
 				9301EEA3223A9253006A4495 /* BloggerTabBarController.swift in Sources */,
