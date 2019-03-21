@@ -53,8 +53,8 @@ extension SearchViewController: UITableViewDelegate{
 }
 extension SearchViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        blogger = [Blogger]()
         if searchText == ""{
-            
             return
         } else {
             listener = DBService.firestoreDB
