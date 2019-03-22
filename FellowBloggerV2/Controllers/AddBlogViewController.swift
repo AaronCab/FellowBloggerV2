@@ -92,7 +92,7 @@ class AddBlogViewController: UIViewController {
                                         let thisBlog = Blog(createdDate: Date.getISOTimestamp(), bloggerId: user.uid, imageURL: imageURL.absoluteString, blogDescription: blogDescription, documentId: docRef.documentID)
                                         DBService.postBlog(blog: thisBlog){ [weak self] error in
                                             if let error = error {
-                                                self?.showAlert(title: "Posting Dish Error", message: error.localizedDescription)
+                                                self?.showAlert(title: "Posting Blog Error", message: error.localizedDescription)
                                             } else {
                                                 self?.showAlert(title: "Blog Posted", message: "Looking forward to checking out your national dish") { action in
                                                     self?.dismiss(animated: true)

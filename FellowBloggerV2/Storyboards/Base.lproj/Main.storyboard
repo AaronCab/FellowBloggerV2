@@ -187,7 +187,11 @@
                         <viewLayoutGuide key="safeArea" id="KsD-dt-wvw"/>
                     </view>
                     <navigationItem key="navigationItem" id="oCf-hC-7Mc">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="BCZ-JX-62Y"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="BCZ-JX-62Y">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="gbb-Zh-z8n" id="ceb-mC-qdL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="editDescriptionText" destination="FW8-KS-bMZ" id="tf4-sb-pUD"/>

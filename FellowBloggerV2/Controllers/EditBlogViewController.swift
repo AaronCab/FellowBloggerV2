@@ -17,5 +17,22 @@ class EditBlogViewController: UIViewController {
         editDescriptionText.text = aBlog.blogDescription
     }
     
-
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        navigationItem.rightBarButtonItem?.isEnabled = false
+        guard let editDescription = editDescriptionText.text,
+            !editDescription.isEmpty else {
+                showAlert(title: "Missing Fields", message: "Blog Description is Required")
+                return
+        }
+        DBService.firestoreDB
+            .collection(BlogsCollectionKeys.CollectionKey)
+            .document(aBlog.documentId)
+            .updateData([BlogsCollectionKeys.BlogDescritionKey : editDescription
+            ]) { [weak self] (error) in
+                if let error = error {
+                    self?.showAlert(title: "Editing Error", message: error.localizedDescription)
+                }
+                self?.navigationItem.rightBarButtonItem?.isEnabled = true
+        }
     }
+}
