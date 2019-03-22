@@ -29,6 +29,7 @@ class SearchViewController: UIViewController {
         userTableView.dataSource = self
         userTableView.delegate = self
         blogSearchBar.delegate = self
+        hideKeyboardWhenTappedAround()
         navigationItem.title = "FellowBloggerV2"
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,7 +63,7 @@ extension SearchViewController: UITableViewDataSource{
 }
 extension SearchViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 75
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "Show Profile", sender: indexPath)
@@ -88,3 +89,4 @@ extension SearchViewController: UISearchBarDelegate{
         }
     }
 }
+

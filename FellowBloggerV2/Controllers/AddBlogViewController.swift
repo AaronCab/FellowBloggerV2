@@ -25,6 +25,7 @@ class AddBlogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextView()
+        hideKeyboardWhenTappedAround()
         
     }
     private func configureTextView() {
@@ -130,8 +131,6 @@ extension AddBlogViewController: UIImagePickerControllerDelegate, UINavigationCo
             print("original image is nil")
             return
         }
-        // resizing image to reduce memory footprint while app in running
-        // if not app will terminate if memory runs low
         let resizedImage = Toucan.init(image: originalImage).resize(CGSize(width: 500, height: 500))
         selectedImage = resizedImage.image
         blogImage.image = resizedImage.image
