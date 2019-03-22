@@ -77,9 +77,10 @@ class DetailBlogViewController: UIViewController {
     }
     private func showEditView() {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "EditBlogView")
-        viewController.modalTransitionStyle = .crossDissolve
-        self.present(viewController, animated: true, completion: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "EditBlogView") as! EditBlogViewController
+//        viewController.modalTransitionStyle = .crossDissolve
+        viewController.aBlog = blog
+        navigationController?.pushViewController(viewController, animated: true)
         
     }
 

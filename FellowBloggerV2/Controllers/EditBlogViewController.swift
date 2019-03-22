@@ -9,16 +9,13 @@
 import UIKit
 
 class EditBlogViewController: UIViewController {
-    public var blog: Blog!
+    public var aBlog: Blog!
 
     @IBOutlet weak var editDescriptionText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        editDescriptionText.text = blog.blogDescription
+        editDescriptionText.text = aBlog.blogDescription
     }
     
 
-    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true)
     }
-}
