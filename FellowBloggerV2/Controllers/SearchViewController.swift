@@ -87,23 +87,4 @@ extension SearchViewController: UISearchBarDelegate{
 
         }
     }
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        blogger = [Blogger]()
-//        guard let searchText = searchBar.text else {return}
-//        if searchText == ""{
-//            return
-//        } else {
-//            listener = DBService.firestoreDB
-//                .collection(BloggersCollectionKeys.CollectionKey).addSnapshotListener { [weak self] (snapshot, error) in
-//                    if let error = error {
-//                        print("failed to fetch Blogs with error: \(error.localizedDescription)")
-//                    } else if let snapshot = snapshot {
-//                        self?.blogger = snapshot.documents.map { Blogger(dict: $0.data()) }
-//                            .filter { $0.displayName.contains(searchText.lowercased()) || $0.displayName.contains(searchText.uppercased()) || ($0.firstName?.contains(searchText.lowercased()))! || ($0.lastName?.contains(searchText.uppercased()))! || $0.email.contains(searchText.lowercased())}
-//                    }
-//            }
-//
-//        }
-//
-//    }
 }

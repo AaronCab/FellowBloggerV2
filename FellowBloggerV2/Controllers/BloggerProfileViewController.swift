@@ -32,10 +32,7 @@ class BloggerProfileViewController: UIViewController {
         fetchUsersBlogs()
         updateProfileUI()
     }
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(true)
-//        updateProfileUI()
-//    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Profile Detail View" {
             guard let selectedIndexPath =  tableView.indexPathForSelectedRow,
@@ -130,6 +127,6 @@ extension BloggerProfileViewController: ProfileHeaderViewDelegate {
         authservice.signOutAccount()
     }
     func willEditProfile(_ profileHeaderView: ProfileHeaderView) {
-        performSegue(withIdentifier: "Show Edit Profile", sender: nil)
+       
     }
 }

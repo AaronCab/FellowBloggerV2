@@ -135,6 +135,9 @@ extension ProfileViewController: ProfileHeaderViewDelegate {
     authservice.signOutAccount()
   }
   func willEditProfile(_ profileHeaderView: ProfileHeaderView) {
-    performSegue(withIdentifier: "Show Edit Profile", sender: nil)
+    let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+     let viewController = storyBoard.instantiateViewController(withIdentifier: "EditProfileView")
+    viewController.modalTransitionStyle = .crossDissolve
+    self.present(viewController, animated: true, completion: nil)
   }
 }

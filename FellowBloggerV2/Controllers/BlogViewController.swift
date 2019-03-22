@@ -89,6 +89,7 @@ extension BlogViewController: UICollectionViewDataSource{
         cell.blogLabel.text = userBlog.blogDescription
         cell.blogImage.kf.indicatorType = .activity
         cell.blogImage.kf.setImage(with: URL(string: userBlog.imageURL), placeholder: #imageLiteral(resourceName: "icons8-check_male"))
+        cell.blogImage.layer.cornerRadius = 400
         fetchBlogCreator(userId: userBlog.bloggerId, cell: cell, blog: userBlog)
         return cell
         
