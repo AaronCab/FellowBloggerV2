@@ -76,7 +76,11 @@ class DetailBlogViewController: UIViewController {
         }
     }
     private func showEditView() {
-        performSegue(withIdentifier: "Show Edit Blog", sender: nil)
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "EditBlogView")
+        viewController.modalTransitionStyle = .crossDissolve
+        self.present(viewController, animated: true, completion: nil)
+        
     }
 
 }

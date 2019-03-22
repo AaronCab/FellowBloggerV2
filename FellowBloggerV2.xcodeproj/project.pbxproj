@@ -41,6 +41,7 @@
 		9348233D2243D6740019D639 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9348233C2243D6740019D639 /* ProfileTableViewCell.swift */; };
 		9348233F2243E8000019D639 /* BloggerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9348233E2243E8000019D639 /* BloggerProfileViewController.swift */; };
 		9348234122440E990019D639 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9348234022440E990019D639 /* EditProfileViewController.swift */; };
+		9380F0E1224546ED0089A947 /* EditBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9380F0E0224546ED0089A947 /* EditBlogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		9348233C2243D6740019D639 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9348233E2243E8000019D639 /* BloggerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloggerProfileViewController.swift; sourceTree = "<group>"; };
 		9348234022440E990019D639 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		9380F0E0224546ED0089A947 /* EditBlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBlogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				9348232F2242B81F0019D639 /* SearchViewController.swift */,
 				9348233E2243E8000019D639 /* BloggerProfileViewController.swift */,
 				9348234022440E990019D639 /* EditProfileViewController.swift */,
+				9380F0E0224546ED0089A947 /* EditBlogViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9348234122440E990019D639 /* EditProfileViewController.swift in Sources */,
+				9380F0E1224546ED0089A947 /* EditBlogViewController.swift in Sources */,
 				934823382242C0EA0019D639 /* ProfileViewController.swift in Sources */,
 				9301EECF223AE6FD006A4495 /* CreateAccountController.swift in Sources */,
 				9301EEEE22415F78006A4495 /* BlogCell.swift in Sources */,
