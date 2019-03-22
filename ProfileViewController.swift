@@ -66,6 +66,7 @@ class ProfileViewController: UIViewController {
         self?.showAlert(title: "Error fetching account info", message: error?.localizedDescription)
       } else if let user = user {
         self?.profileHeaderView.displayNameLabel.text = "@" + user.displayName
+        self?.profileHeaderView.bioLabel.text = user.bio
         guard let photoURL = user.photoURL,
           !photoURL.isEmpty else {
             return

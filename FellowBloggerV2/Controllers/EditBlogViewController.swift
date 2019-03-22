@@ -33,6 +33,7 @@ class EditBlogViewController: UIViewController {
                     self?.showAlert(title: "Editing Error", message: error.localizedDescription)
                 }
                 self?.navigationItem.rightBarButtonItem?.isEnabled = true
+                self?.dismiss(animated: true)
         }
     }
 }

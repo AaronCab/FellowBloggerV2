@@ -76,8 +76,11 @@ class EditProfileViewController: UIViewController {
         navigationItem.rightBarButtonItem?.isEnabled = false
         guard let imageData = selectedImage?.jpegData(compressionQuality: 1.0),
             let user = authservice.getCurrentUser(),
-            let displayName = firstNameTextField.text,
-            !displayName.isEmpty else {
+            let firstName = firstNameTextField.text,
+            let lastName = lastNameTextField.text,
+            let userName = userNameTextField.text,
+            let bioName = bioTextView.text,
+            !userName.isEmpty else {
                 showAlert(title: "Missing Fields", message: "A photo and username are Required")
                 return
         }
@@ -87,7 +90,7 @@ class EditProfileViewController: UIViewController {
             } else if let imageURL = imageURL {
                 // update auth user and user db document
                 let request = user.createProfileChangeRequest()
-                request.displayName = displayName
+                request.displayName = userName
                 request.photoURL = imageURL
                 request.commitChanges(completion: { (error) in
                     if let error = error {
@@ -98,7 +101,10 @@ class EditProfileViewController: UIViewController {
                     .collection(BloggersCollectionKeys.CollectionKey)
                     .document(user.uid)
                     .updateData([BloggersCollectionKeys.PhotoURLKey    : imageURL.absoluteString,
-                                 BloggersCollectionKeys.DisplayNameKey : displayName
+                                 BloggersCollectionKeys.DisplayNameKey : userName,
+                                 BloggersCollectionKeys.BioKey: bioName,
+                                 BloggersCollectionKeys.FirstNameKey : firstName,
+                                 BloggersCollectionKeys.LastNameKey : lastName
                         ], completion: { (error) in
                             if let error = error {
                                 self?.showAlert(title: "Error Saving Account Info", message: error.localizedDescription)
