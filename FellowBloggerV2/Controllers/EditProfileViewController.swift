@@ -29,7 +29,7 @@ class EditProfileViewController: UIViewController {
     public var displayName2: String!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     
