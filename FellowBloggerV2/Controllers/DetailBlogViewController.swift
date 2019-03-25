@@ -10,6 +10,7 @@ import UIKit
 
 class DetailBlogViewController: UIViewController {
     public var blog: Blog!
+    public var blogger: Blogger!
     public var displayName: String?
     private let authservice = AppDelegate.authservice
     @IBOutlet weak var profileImage: UIImageView!
@@ -24,6 +25,13 @@ class DetailBlogViewController: UIViewController {
     func updateUI(){
         blogImage.kf.setImage(with: URL(string: blog.imageURL), placeholder: #imageLiteral(resourceName: "icons8-remove_user_group_man_man"))
         blogDescriptionLabel.text = blog.blogDescription
+        DBService.fetchBlogCreator(userId: blog.bloggerId) { (error, blogCreator) in
+            if let error = error {
+                print("failed to fetch dish creator with error: \(error.localizedDescription)")
+            } else if let blogCreator = blogCreator {
+                self.profileImage.kf.setImage(with: URL(string: blogCreator.photoURL!), placeholder: #imageLiteral(resourceName: "icons8-remove_user_group_man_man"))
+            }
+        }
     }
     @IBAction func editButtonPressed(_ sender: UIButton) {
         guard let user = authservice.getCurrentUser() else {
@@ -68,7 +76,12 @@ class DetailBlogViewController: UIViewController {
         }
     }
     private func showEditView() {
-        performSegue(withIdentifier: "Show Edit Blog", sender: nil)
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "EditBlogView") as! EditBlogViewController
+//        viewController.modalTransitionStyle = .crossDissolve
+        viewController.aBlog = blog
+        navigationController?.pushViewController(viewController, animated: true)
+        
     }
 
 }

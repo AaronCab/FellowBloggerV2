@@ -3,6 +3,7 @@
 //  FellowBloggerV2
 //
 //  Created by Aaron Cabreja on 3/19/19.
+
 //  Copyright © 2019 Aaron Cabreja. All rights reserved.
 //
 
@@ -21,6 +22,8 @@ class ProfileHeaderView: UIView {
   @IBOutlet weak var signOutButton: UIButton!
   
     @IBOutlet weak var coverImage: UIImageView!
+    
+    @IBOutlet weak var bioLabel: UILabel!
     weak var delegate: ProfileHeaderViewDelegate?
   
   override init(frame: CGRect) {

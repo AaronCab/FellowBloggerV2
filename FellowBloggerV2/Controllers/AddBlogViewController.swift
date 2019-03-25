@@ -25,6 +25,7 @@ class AddBlogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextView()
+        hideKeyboardWhenTappedAround()
         
     }
     private func configureTextView() {
@@ -91,7 +92,7 @@ class AddBlogViewController: UIViewController {
                                         let thisBlog = Blog(createdDate: Date.getISOTimestamp(), bloggerId: user.uid, imageURL: imageURL.absoluteString, blogDescription: blogDescription, documentId: docRef.documentID)
                                         DBService.postBlog(blog: thisBlog){ [weak self] error in
                                             if let error = error {
-                                                self?.showAlert(title: "Posting Dish Error", message: error.localizedDescription)
+                                                self?.showAlert(title: "Posting Blog Error", message: error.localizedDescription)
                                             } else {
                                                 self?.showAlert(title: "Blog Posted", message: "Looking forward to checking out your national dish") { action in
                                                     self?.dismiss(animated: true)
@@ -130,8 +131,6 @@ extension AddBlogViewController: UIImagePickerControllerDelegate, UINavigationCo
             print("original image is nil")
             return
         }
-        // resizing image to reduce memory footprint while app in running
-        // if not app will terminate if memory runs low
         let resizedImage = Toucan.init(image: originalImage).resize(CGSize(width: 500, height: 500))
         selectedImage = resizedImage.image
         blogImage.image = resizedImage.image

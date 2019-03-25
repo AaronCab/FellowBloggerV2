@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileHeaderView" customModule="FellowBloggerV2" customModuleProvider="target">
             <connections>
+                <outlet property="bioLabel" destination="RGE-2m-PAj" id="iJU-f0-uz2"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="be7-Af-SL5"/>
                 <outlet property="coverImage" destination="QsY-YW-oBk" id="IQa-qw-v7X"/>
                 <outlet property="displayNameLabel" destination="o0E-LZ-mgJ" id="OVH-EN-aqG"/>
@@ -58,16 +59,25 @@
                         <action selector="signOutButtonPressed:" destination="-1" eventType="touchUpInside" id="RcM-nb-sy9"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGE-2m-PAj">
+                    <rect key="frame" x="8" y="228" width="351" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="o0E-LZ-mgJ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="8" id="3tX-Pt-2Ve"/>
+                <constraint firstItem="RGE-2m-PAj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="49Z-oY-yHV"/>
+                <constraint firstItem="RGE-2m-PAj" firstAttribute="top" secondItem="o0E-LZ-mgJ" secondAttribute="bottom" constant="25" id="6be-9v-UHJ"/>
                 <constraint firstItem="xgf-BO-VDF" firstAttribute="top" secondItem="0af-30-fxu" secondAttribute="bottom" constant="4" id="VxX-eN-iV1"/>
                 <constraint firstItem="Pb9-FA-vwU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="XXa-fk-TaH"/>
                 <constraint firstItem="QsY-YW-oBk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Ymt-kT-iUB"/>
                 <constraint firstItem="0af-30-fxu" firstAttribute="top" secondItem="QsY-YW-oBk" secondAttribute="bottom" constant="8" id="Ynb-QW-9kq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0af-30-fxu" secondAttribute="trailing" constant="28" id="aX2-Tj-4Oe"/>
                 <constraint firstItem="QsY-YW-oBk" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="anO-mO-q9W"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RGE-2m-PAj" secondAttribute="trailing" constant="16" id="g4L-mM-W88"/>
                 <constraint firstItem="Pb9-FA-vwU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="57" id="jDW-0V-oQ9"/>
                 <constraint firstItem="o0E-LZ-mgJ" firstAttribute="top" secondItem="xgf-BO-VDF" secondAttribute="bottom" constant="8" id="jXu-57-0Ii"/>
                 <constraint firstItem="QsY-YW-oBk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lDR-WO-YgZ"/>
