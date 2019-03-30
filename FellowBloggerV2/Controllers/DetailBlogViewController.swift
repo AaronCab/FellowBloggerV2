@@ -9,6 +9,8 @@
 import UIKit
 
 class DetailBlogViewController: UIViewController {
+    private var gradient: CAGradientLayer!
+
     public var blog: Blog!
     public var blogger: Blogger!
     public var displayName: String?
@@ -16,15 +18,25 @@ class DetailBlogViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var blogImage: UIImageView!
-    @IBOutlet weak var blogDescriptionLabel: UILabel!
+   
+    @IBOutlet weak var descriptionTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        addGradient()
+    }
+    private func addGradient(){
         
+        let firstColor = UIColor.init(red: 222/255, green: 98/255, blue: 98/255, alpha: 1)
+        let secondColor = UIColor.init(red: 255/255, green: 184/255, blue: 140/255, alpha: 1)
+        gradient = CAGradientLayer()
+        gradient.frame = self.view.bounds
+        gradient.colors = [firstColor.cgColor, secondColor.cgColor]
+        self.view.layer.insertSublayer(gradient, at: 0)
     }
     func updateUI(){
         blogImage.kf.setImage(with: URL(string: blog.imageURL), placeholder: #imageLiteral(resourceName: "icons8-remove_user_group_man_man"))
-        blogDescriptionLabel.text = blog.blogDescription
+        descriptionTextView.text = blog.blogDescription
         DBService.fetchBlogCreator(userId: blog.bloggerId) { (error, blogCreator) in
             if let error = error {
                 print("failed to fetch dish creator with error: \(error.localizedDescription)")

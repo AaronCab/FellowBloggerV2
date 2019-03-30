@@ -11,6 +11,8 @@ import UIKit
 class BloggerProfileViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    private var gradient: CAGradientLayer!
+
     public var blogger: Blogger!
     private lazy var profileHeaderView: ProfileHeaderView = {
         let headerView = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 300))
@@ -24,6 +26,16 @@ class BloggerProfileViewController: UIViewController {
             }
         }
     }
+    private func addGradient(){
+        
+        let firstColor = UIColor.init(red: 222/255, green: 98/255, blue: 98/255, alpha: 1)
+        let secondColor = UIColor.init(red: 255/255, green: 184/255, blue: 140/255, alpha: 1)
+        gradient = CAGradientLayer()
+        gradient.frame = self.view.bounds
+        gradient.colors = [firstColor.cgColor, secondColor.cgColor]
+        self.view.layer.insertSublayer(gradient, at: 0)
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +43,7 @@ class BloggerProfileViewController: UIViewController {
         profileHeaderView.delegate = self
         fetchUsersBlogs()
         updateProfileUI()
+        addGradient()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -69,6 +82,7 @@ class BloggerProfileViewController: UIViewController {
                         return
                 }
                 self?.profileHeaderView.profileImageView.kf.setImage(with: URL(string: photoURL), placeholder: #imageLiteral(resourceName: "placeholder-image.png"))
+                self?.profileHeaderView.bioLabel.text = user.bio
             }
         }
     }

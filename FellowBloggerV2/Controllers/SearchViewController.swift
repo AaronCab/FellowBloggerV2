@@ -14,6 +14,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var userTableView: UITableView!
     @IBOutlet weak var blogSearchBar: UISearchBar!
+    private var gradient: CAGradientLayer!
+
     private var listener: ListenerRegistration!
     private var authservice = AppDelegate.authservice
     private var blogger = [Blogger](){
@@ -23,7 +25,15 @@ class SearchViewController: UIViewController {
             }
         }
     }
-    
+    private func addGradient(){
+        
+        let firstColor = UIColor.init(red: 222/255, green: 98/255, blue: 98/255, alpha: 1)
+        let secondColor = UIColor.init(red: 255/255, green: 184/255, blue: 140/255, alpha: 1)
+        gradient = CAGradientLayer()
+        gradient.frame = self.view.bounds
+        gradient.colors = [firstColor.cgColor, secondColor.cgColor]
+        self.view.layer.insertSublayer(gradient, at: 0)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         userTableView.dataSource = self
@@ -31,6 +41,7 @@ class SearchViewController: UIViewController {
         blogSearchBar.delegate = self
         hideKeyboardWhenTappedAround()
         navigationItem.title = "FellowBloggerV2"
+        addGradient()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Show Profile" {

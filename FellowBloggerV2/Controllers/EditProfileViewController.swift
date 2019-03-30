@@ -16,6 +16,16 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var profileImage: CircularButton!
     @IBOutlet weak var coverImagePhoto: UIButton!
+    private var gradient: CAGradientLayer!
+    private func addGradient(){
+        
+        let firstColor = UIColor.init(red: 222/255, green: 98/255, blue: 98/255, alpha: 1)
+        let secondColor = UIColor.init(red: 255/255, green: 184/255, blue: 140/255, alpha: 1)
+        gradient = CAGradientLayer()
+        gradient.frame = self.view.bounds
+        gradient.colors = [firstColor.cgColor, secondColor.cgColor]
+        self.view.layer.insertSublayer(gradient, at: 0)
+    }
     private var selectedImage: UIImage?
     private lazy var imagePickerController: UIImagePickerController = {
         let ip = UIImagePickerController()
@@ -30,6 +40,7 @@ class EditProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+        addGradient()
         // Do any additional setup after loading the view.
     }
     
